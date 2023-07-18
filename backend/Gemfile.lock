@@ -66,6 +66,7 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
+    bcrypt (3.1.19)
     builder (3.2.4)
     concurrent-ruby (1.2.2)
     crass (1.0.6)
@@ -81,6 +82,7 @@ GEM
     io-console (0.6.0)
     irb (1.7.3)
       reline (>= 0.3.6)
+    jwt (2.7.1)
     loofah (2.21.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -109,6 +111,8 @@ GEM
       nio4r (~> 2.0)
     racc (1.7.1)
     rack (2.2.7)
+    rack-cors (2.0.1)
+      rack (>= 2.0.0)
     rack-test (2.1.0)
       rack (>= 1.3)
     rails (7.0.6)
@@ -156,8 +160,11 @@ PLATFORMS
   arm64-darwin-21
 
 DEPENDENCIES
+  bcrypt (~> 3.1.7)
   debug
+  jwt
   puma (~> 5.0)
+  rack-cors
   rails (~> 7.0.5)
   sqlite3 (~> 1.4)
   tzinfo-data
