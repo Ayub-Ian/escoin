@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    before_action :authorize_request, except: %i[create]
+    before_action :authorize_request, except: %i[create account]
     before_action :find_user, except: %i[create index]
     # GET /users = all users
     def index
@@ -36,6 +36,7 @@ class UsersController < ApplicationController
         @user.destroy!
         head :no_content
     end
+
 
     private
     def find_user

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :users, only: [:index, :create, :show, :update, :destroy]
-
+  resources :accounts, only: [:index]
   # Authentication routes
   post "login", action: :create, controller: "sessions"
   post "signup", action: :create, controller: "users"
